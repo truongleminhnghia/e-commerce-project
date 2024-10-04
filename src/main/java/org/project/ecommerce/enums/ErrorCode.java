@@ -1,4 +1,4 @@
-package org.project.ecommerce.exceptions;
+package org.project.ecommerce.enums;
 
 import lombok.*;
 

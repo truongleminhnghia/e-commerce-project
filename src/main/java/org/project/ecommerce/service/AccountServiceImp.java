@@ -3,7 +3,7 @@ package org.project.ecommerce.service;
 import org.project.ecommerce.dtos.requests.AccountCreationRequest;
 import org.project.ecommerce.entities.Account;
 import org.project.ecommerce.exceptions.AppException;
-import org.project.ecommerce.exceptions.ErrorCode;
+import org.project.ecommerce.enums.ErrorCode;
 import org.project.ecommerce.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

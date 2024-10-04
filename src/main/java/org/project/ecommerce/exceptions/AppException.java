@@ -1,6 +1,7 @@
 package org.project.ecommerce.exceptions;
 
 import lombok.*;
+import org.project.ecommerce.enums.ErrorCode;
 
 @Getter
 @Setter

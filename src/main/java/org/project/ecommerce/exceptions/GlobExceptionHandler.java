@@ -1,6 +1,7 @@
 package org.project.ecommerce.exceptions;
 
 import org.project.ecommerce.dtos.responses.ApiResponse;
+import org.project.ecommerce.enums.ErrorCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
