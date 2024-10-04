@@ -17,10 +17,10 @@ public class AccountServiceImp implements AccountService {
 
     @Override
     public Account createAccount(AccountCreationRequest accountCreationRequest) {
-        Account account = new Account();
         if(accountRepository.existsByUserName(accountCreationRequest.getUserName())) {
             throw new AppException(ErrorCode.USER_EXISTED);
         }
+        Account account = new Account();
         account.setUserName(accountCreationRequest.getUserName());
         account.setPassword(accountCreationRequest.getPassword());
         account.setStatus(true);

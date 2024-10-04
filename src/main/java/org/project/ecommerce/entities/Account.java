@@ -26,7 +26,7 @@ public class Account extends BaseEntity {
     private String password;
 
     @Column(name = "status")
-    private boolean status;
+    private boolean status = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
