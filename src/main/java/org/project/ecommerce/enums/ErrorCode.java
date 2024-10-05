@@ -15,6 +15,7 @@ public enum ErrorCode {
     PASSWORD_INVALID(1006, "Password must be at least 3 characters"),
     PASSWORD_NOT_BLANK(1007, "Password cannot be blank"),
     HELLO_WORLD(1008, "Hello world"),
+    USER_NOT_EXISTED(1009, "User not existed"),
     ;
 
     private int code;
