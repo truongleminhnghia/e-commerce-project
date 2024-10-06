@@ -5,13 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.project.ecommerce.enums.EnumRoleName;
 
-import java.awt.datatransfer.ClipboardOwner;
 import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -29,5 +26,5 @@ public class Role {
     private EnumRoleName roleName;
 
     @OneToMany(mappedBy = "role")
-    private Set<Account> accounts;
+    private Set<User> users;
 }
