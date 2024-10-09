@@ -6,9 +6,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.project.ecommerce.enums.EnumGenner;
+import org.project.ecommerce.enums.EnumWorkingStatus;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -58,7 +60,25 @@ public class User {
     @Column(name = "status")
     private boolean status;
 
+    @Column(name = "lock_number")
+    private int lockUser;
+
+    @Column(name = "salary")
+    private double salary;
+
+    @Column(name = "working_status")
+    private EnumWorkingStatus workingStatus;
+
+    @Column(name = "rating")
+    private float rating;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Salary> salaries;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Feedback> feedbacks;
 }

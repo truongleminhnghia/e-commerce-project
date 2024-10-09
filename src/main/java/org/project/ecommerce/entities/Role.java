@@ -25,6 +25,6 @@ public class Role {
     @Enumerated(EnumType.STRING)
     private EnumRoleName roleName;
 
-    @OneToMany(mappedBy = "role")
+    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<User> users;
 }
