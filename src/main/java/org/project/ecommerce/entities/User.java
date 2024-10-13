@@ -9,7 +9,7 @@ import org.project.ecommerce.enums.EnumGenner;
 import org.project.ecommerce.enums.EnumWorkingStatus;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -55,7 +55,7 @@ public class User {
 
     @Column(name = "birthDate")
     @DateTimeFormat(pattern = "yyyy-MM-ddd")
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 
     @Column(name = "status")
     private boolean status;
